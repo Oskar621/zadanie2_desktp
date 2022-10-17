@@ -16,5 +16,15 @@ namespace zadanie2_desktp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verification_picture_LoadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+
+        }
     }
 }
