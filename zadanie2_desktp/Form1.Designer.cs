@@ -37,7 +37,7 @@
             this.verification_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.zaloguj_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.verification_picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +107,6 @@
             this.verification_picture.Size = new System.Drawing.Size(118, 52);
             this.verification_picture.TabIndex = 6;
             this.verification_picture.TabStop = false;
-            this.verification_picture.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.verification_picture_LoadCompleted);
             // 
             // label4
             // 
@@ -118,6 +117,7 @@
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "losuj nowy";
+            this.label4.Click += new System.EventHandler(this.picture_random_gen_label);
             // 
             // textBox3
             // 
@@ -127,23 +127,23 @@
             this.textBox3.Size = new System.Drawing.Size(221, 29);
             this.textBox3.TabIndex = 8;
             // 
-            // button1
+            // zaloguj_button
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(506, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Zaloguj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.zaloguj_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.zaloguj_button.Location = new System.Drawing.Point(506, 363);
+            this.zaloguj_button.Name = "zaloguj_button";
+            this.zaloguj_button.Size = new System.Drawing.Size(80, 30);
+            this.zaloguj_button.TabIndex = 9;
+            this.zaloguj_button.Text = "Zaloguj";
+            this.zaloguj_button.UseVisualStyleBackColor = true;
+            this.zaloguj_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.zaloguj_button);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.verification_picture);
@@ -173,7 +173,7 @@
         private System.Windows.Forms.PictureBox verification_picture;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button zaloguj_button;
     }
 }
 
