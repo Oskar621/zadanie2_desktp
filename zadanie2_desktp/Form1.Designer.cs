@@ -78,6 +78,7 @@
             this.Haslo_textbox.Name = "Haslo_textbox";
             this.Haslo_textbox.Size = new System.Drawing.Size(221, 29);
             this.Haslo_textbox.TabIndex = 3;
+            this.Haslo_textbox.TextChanged += new System.EventHandler(this.Haslo_textbox_TextChanged);
             // 
             // label2
             // 

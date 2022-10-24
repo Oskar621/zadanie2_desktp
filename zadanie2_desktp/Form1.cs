@@ -102,8 +102,15 @@ namespace zadanie2_desktp
             }
             else
             {
-                MessageBox.Show("zalogowales sie");
+                Form Form2 = new Form();
+                this.Hide();
+                Form2.Show();
             }
+        }
+
+        private void Haslo_textbox_TextChanged(object sender, EventArgs e)
+        {
+            Haslo_textbox.PasswordChar = '*';
         }
     }
 }
