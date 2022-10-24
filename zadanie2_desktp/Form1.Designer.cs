@@ -30,13 +30,13 @@
         {
             this.Uzytkownik_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Uzytkownik_textbox = new System.Windows.Forms.TextBox();
+            this.Haslo_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.verification_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.kod_z_obrazka_textbox = new System.Windows.Forms.TextBox();
             this.zaloguj_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.verification_picture)).BeginInit();
             this.SuspendLayout();
@@ -63,21 +63,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Hasło";
             // 
-            // textBox1
+            // Uzytkownik_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(309, 73);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 29);
-            this.textBox1.TabIndex = 2;
+            this.Uzytkownik_textbox.Location = new System.Drawing.Point(309, 73);
+            this.Uzytkownik_textbox.Multiline = true;
+            this.Uzytkownik_textbox.Name = "Uzytkownik_textbox";
+            this.Uzytkownik_textbox.Size = new System.Drawing.Size(221, 29);
+            this.Uzytkownik_textbox.TabIndex = 2;
             // 
-            // textBox2
+            // Haslo_textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(309, 135);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 29);
-            this.textBox2.TabIndex = 3;
+            this.Haslo_textbox.Location = new System.Drawing.Point(309, 135);
+            this.Haslo_textbox.Multiline = true;
+            this.Haslo_textbox.Name = "Haslo_textbox";
+            this.Haslo_textbox.Size = new System.Drawing.Size(221, 29);
+            this.Haslo_textbox.TabIndex = 3;
             // 
             // label2
             // 
@@ -119,13 +119,13 @@
             this.label4.Text = "losuj nowy";
             this.label4.Click += new System.EventHandler(this.picture_random_gen_label);
             // 
-            // textBox3
+            // kod_z_obrazka_textbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(309, 288);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 29);
-            this.textBox3.TabIndex = 8;
+            this.kod_z_obrazka_textbox.Location = new System.Drawing.Point(309, 288);
+            this.kod_z_obrazka_textbox.Multiline = true;
+            this.kod_z_obrazka_textbox.Name = "kod_z_obrazka_textbox";
+            this.kod_z_obrazka_textbox.Size = new System.Drawing.Size(221, 29);
+            this.kod_z_obrazka_textbox.TabIndex = 8;
             // 
             // zaloguj_button
             // 
@@ -136,7 +136,7 @@
             this.zaloguj_button.TabIndex = 9;
             this.zaloguj_button.Text = "Zaloguj";
             this.zaloguj_button.UseVisualStyleBackColor = true;
-            this.zaloguj_button.Click += new System.EventHandler(this.button1_Click);
+            this.zaloguj_button.Click += new System.EventHandler(this.zaloguj_button_Click);
             // 
             // Form1
             // 
@@ -144,13 +144,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.zaloguj_button);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.kod_z_obrazka_textbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.verification_picture);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Haslo_textbox);
+            this.Controls.Add(this.Uzytkownik_textbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Uzytkownik_label);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -166,13 +166,13 @@
 
         private System.Windows.Forms.Label Uzytkownik_label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Uzytkownik_textbox;
+        private System.Windows.Forms.TextBox Haslo_textbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox verification_picture;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox kod_z_obrazka_textbox;
         private System.Windows.Forms.Button zaloguj_button;
     }
 }

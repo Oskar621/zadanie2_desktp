@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace zadanie2_desktp
 {
-    
+
     public partial class Form1 : Form
     {
+        public string kod_z_obrazka = "";
         public Image pic1 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\1.png");
         public Image pic2 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\2.png");
         public Image pic3 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\3.png");
@@ -33,21 +34,27 @@ namespace zadanie2_desktp
             {
                 case 1:
                     verification_picture.Image = pic1;
+                    kod_z_obrazka = "unxyxw";
                     break;
                 case 2:
                     verification_picture.Image = pic2;
+                    kod_z_obrazka = "b5nmm";
                     break;
                 case 3:
                     verification_picture.Image = pic3;
+                    kod_z_obrazka = "74853";
                     break;
                 case 4:
                     verification_picture.Image = pic4;
+                    kod_z_obrazka = "cg5dd";
                     break;
                 case 5:
                     verification_picture.Image = pic5;
+                    kod_z_obrazka = "x3deb";
                     break;
                 case 6:
                     verification_picture.Image = pic6;
+                    kod_z_obrazka = "befbd";
                     break;
 
             }
@@ -67,6 +74,36 @@ namespace zadanie2_desktp
         {
             base.OnLoad(e); // Handle the default function
             Picture_generator();
+        }
+
+        private void zaloguj_button_Click(object sender, EventArgs e)
+        {
+            string popr_uzytkownik = "admin";
+            string popr_haslo = "Qwerty1@34";
+            string wprow_uzytkownik = Uzytkownik_textbox.Text;
+            string wprow_haslo = Haslo_textbox.Text;
+            string wprow_kod_z_obrazka = kod_z_obrazka_textbox.Text;
+
+            if (wprow_uzytkownik == "" || wprow_haslo == "" || wprow_kod_z_obrazka == "")
+            {
+                MessageBox.Show("Sprawdz czy wypełniłeś wszystkie pola", "Error");
+            }
+            else if(wprow_uzytkownik != popr_uzytkownik)
+            {
+                MessageBox.Show("Niepoprawne pole \"Uzytkownik\"", "Error");
+            }
+            else if(wprow_haslo != popr_haslo)
+            {
+                MessageBox.Show("Niepoprawne pole \"Haslo\"", "Error");
+            }
+            else if(wprow_kod_z_obrazka != kod_z_obrazka)
+            {
+                MessageBox.Show("Niepoprawny kod z obrazka", "Error");
+            }
+            else
+            {
+                MessageBox.Show("zalogowales sie");
+            }
         }
     }
 }
