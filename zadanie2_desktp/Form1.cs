@@ -103,6 +103,10 @@ namespace zadanie2_desktp
             else
             {
                 MessageBox.Show("zalogowales sie");
+                Form Form2 = new Form();
+                Form2.Show();
+                this.Hide();
+
             }
         }
     }
