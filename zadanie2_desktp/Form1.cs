@@ -14,12 +14,12 @@ namespace zadanie2_desktp
     public partial class Form1 : Form
     {
         public string kod_z_obrazka = "";
-        public Image pic1 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\1.png");
-        public Image pic2 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\2.png");
-        public Image pic3 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\3.png");
-        public Image pic4 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\4.png");
-        public Image pic5 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\5.png");
-        public Image pic6 = Image.FromFile(@"C:\\Users\\student\\Desktop\\asd\\6.png");
+        public Image pic1 = Image.FromFile(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\1.png");
+        public Image pic2 = Image.FromFile(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\2.png");
+        public Image pic3 = Image.FromFile(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\3.png");
+        public Image pic4 = Image.FromFile(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\4.png");
+        public Image pic5 = Image.FromFile(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\5.png");
+        public Image pic6 = Image.FromFile(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\6.png");
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace zadanie2_desktp
             {
                 case 1:
                     verification_picture.Image = pic1;
-                    kod_z_obrazka = "unxyxw";
+                    kod_z_obrazka = "umxyxw";
                     break;
                 case 2:
                     verification_picture.Image = pic2;
@@ -78,6 +78,9 @@ namespace zadanie2_desktp
 
         private void zaloguj_button_Click(object sender, EventArgs e)
         {
+            Form2 f = new Form2();
+            f.ShowDialog();
+            this.Hide();
             string popr_uzytkownik = "admin";
             string popr_haslo = "Qwerty1@34";
             string wprow_uzytkownik = Uzytkownik_textbox.Text;
@@ -102,10 +105,10 @@ namespace zadanie2_desktp
             }
             else
             {
-                MessageBox.Show("zalogowales sie");
-                Form Form2 = new Form();
-                Form2.Show();
-                this.Hide();
+                //MessageBox.Show("zalogowales sie");
+                //Form2 f = new Form2();
+                //f.ShowDialog();
+                //this.Hide();
 
             }
         }
