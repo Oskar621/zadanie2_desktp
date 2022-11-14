@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace zadanie2_desktp
@@ -29,7 +23,6 @@ namespace zadanie2_desktp
         {
             Random random_number_gen = new Random();
             int random_number = random_number_gen.Next(1, 7);
-
             switch (random_number)
             {
                 case 1:
@@ -60,11 +53,6 @@ namespace zadanie2_desktp
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void picture_random_gen_label(object sender, EventArgs e)
         {
             Picture_generator();
@@ -72,15 +60,13 @@ namespace zadanie2_desktp
 
         protected override void OnLoad(EventArgs e)
         {
-            base.OnLoad(e); // Handle the default function
+            base.OnLoad(e);
             Picture_generator();
+            Haslo_textbox.PasswordChar = '*';
         }
 
         private void zaloguj_button_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
-            f.ShowDialog();
-            this.Hide();
             string popr_uzytkownik = "admin";
             string popr_haslo = "Qwerty1@34";
             string wprow_uzytkownik = Uzytkownik_textbox.Text;
@@ -105,11 +91,10 @@ namespace zadanie2_desktp
             }
             else
             {
-                //MessageBox.Show("zalogowales sie");
-                //Form2 f = new Form2();
-                //f.ShowDialog();
-                //this.Hide();
-
+                MessageBox.Show("zalogowales sie");
+                Form2 f = new Form2();
+                f.ShowDialog();
+                this.Hide();
             }
         }
     }

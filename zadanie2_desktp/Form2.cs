@@ -63,8 +63,7 @@ namespace zadanie2_desktp
                 odczyt.Close();
                 StreamWriter fs = new StreamWriter(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\uczen.txt", true);
                 string do_dopisania = $"{id_ucznia};{imie};{nazwisko};{klasa}";
-                fs.Write(Environment.NewLine);
-                fs.Write(do_dopisania);
+                fs.Write(Environment.NewLine+do_dopisania);
                 fs.Close();      
             }
         }
@@ -107,13 +106,23 @@ namespace zadanie2_desktp
                     }
                 }
             }
-            if (Wybor2.Text == "rozpoczyna sie od")
+            else if (Wybor2.Text == "rozpoczyna sie od")
             {
                 for (int j = 1; j < tablica.Length; j++)
                 {
                     if (tablica[j][i].StartsWith(Wybor3.Text))
                     {
                         wyniki += tablica[j][0] +";" + tablica[j][1] + ";" + tablica[j][2] + ";" + tablica[j][3] + Environment.NewLine;
+                    }
+                }
+            }
+            else
+            {
+                for (int j = 1; j < tablica.Length; j++)
+                {
+                    if (tablica[j][i].Contains(Wybor3.Text))
+                    {
+                        wyniki += tablica[j][0] + ";" + tablica[j][1] + ";" + tablica[j][2] + ";" + tablica[j][3] + Environment.NewLine;
                     }
                 }
             }

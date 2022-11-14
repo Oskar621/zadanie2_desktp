@@ -201,7 +201,8 @@
             this.Wybor2.FormattingEnabled = true;
             this.Wybor2.Items.AddRange(new object[] {
             "rozpoczyna sie od",
-            "jest równe"});
+            "jest równe",
+            "zawiera"});
             this.Wybor2.Location = new System.Drawing.Point(285, 87);
             this.Wybor2.Name = "Wybor2";
             this.Wybor2.Size = new System.Drawing.Size(121, 21);
