@@ -74,7 +74,7 @@ namespace zadanie2_desktp
             string[][] tablica;
             StreamReader fs = new StreamReader(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\uczen.txt", true);
             string linia;
-
+            
             List<string[]> lista = new List<string[]>();
             while ((linia = fs.ReadLine()) != null)
             {
@@ -83,8 +83,41 @@ namespace zadanie2_desktp
             }
             tablica = lista.ToArray();
             fs.Close();
-            
-
+            int i;
+            if(Wybor1.Text == "Imie")
+            {
+                i = 1;
+            }
+            else if(Wybor1.Text == "Nazwisko")
+            {
+                i = 2;
+            }
+            else
+            {
+                i = 3;
+            }
+            string wyniki = "";
+            if (Wybor2.Text == "jest równe")
+            {
+                for(int j = 1; j < tablica.Length;j++)
+                {
+                    if (tablica[j][i] == Wybor3.Text)
+                    {
+                        wyniki += tablica[j][0] + ";" + tablica[j][1] + ";" + tablica[j][2] + ";" + tablica[j][3] + Environment.NewLine;
+                    }
+                }
+            }
+            if (Wybor2.Text == "rozpoczyna sie od")
+            {
+                for (int j = 1; j < tablica.Length; j++)
+                {
+                    if (tablica[j][i].StartsWith(Wybor3.Text))
+                    {
+                        wyniki += tablica[j][0] +";" + tablica[j][1] + ";" + tablica[j][2] + ";" + tablica[j][3] + Environment.NewLine;
+                    }
+                }
+            }
+            WynikiTextBox.Text = wyniki;
         }
     }
 }

@@ -39,11 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SzukajButton = new System.Windows.Forms.Button();
-            this.Wyniki = new System.Windows.Forms.TextBox();
+            this.WynikiTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Wybor1 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Wybor2 = new System.Windows.Forms.ComboBox();
+            this.Wybor3 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -61,11 +61,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.Wybor3);
+            this.tabPage1.Controls.Add(this.Wybor2);
             this.tabPage1.Controls.Add(this.Wybor1);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.Wyniki);
+            this.tabPage1.Controls.Add(this.WynikiTextBox);
             this.tabPage1.Controls.Add(this.SzukajButton);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -166,13 +166,13 @@
             this.SzukajButton.UseVisualStyleBackColor = true;
             this.SzukajButton.Click += new System.EventHandler(this.SzukajButton_Click);
             // 
-            // Wyniki
+            // WynikiTextBox
             // 
-            this.Wyniki.Location = new System.Drawing.Point(3, 213);
-            this.Wyniki.Multiline = true;
-            this.Wyniki.Name = "Wyniki";
-            this.Wyniki.Size = new System.Drawing.Size(780, 210);
-            this.Wyniki.TabIndex = 1;
+            this.WynikiTextBox.Location = new System.Drawing.Point(3, 213);
+            this.WynikiTextBox.Multiline = true;
+            this.WynikiTextBox.Name = "WynikiTextBox";
+            this.WynikiTextBox.Size = new System.Drawing.Size(780, 210);
+            this.WynikiTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -196,24 +196,24 @@
             this.Wybor1.Size = new System.Drawing.Size(121, 21);
             this.Wybor1.TabIndex = 3;
             // 
-            // comboBox1
+            // Wybor2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "rozpoczyna sie od ",
+            this.Wybor2.FormattingEnabled = true;
+            this.Wybor2.Items.AddRange(new object[] {
+            "rozpoczyna sie od",
             "jest równe"});
-            this.comboBox1.Location = new System.Drawing.Point(285, 87);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.Wybor2.Location = new System.Drawing.Point(285, 87);
+            this.Wybor2.Name = "Wybor2";
+            this.Wybor2.Size = new System.Drawing.Size(121, 21);
+            this.Wybor2.TabIndex = 4;
             // 
-            // textBox1
+            // Wybor3
             // 
-            this.textBox1.Location = new System.Drawing.Point(469, 87);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 21);
-            this.textBox1.TabIndex = 5;
+            this.Wybor3.Location = new System.Drawing.Point(469, 87);
+            this.Wybor3.Multiline = true;
+            this.Wybor3.Name = "Wybor3";
+            this.Wybor3.Size = new System.Drawing.Size(131, 21);
+            this.Wybor3.TabIndex = 5;
             // 
             // Form2
             // 
@@ -246,10 +246,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Wyniki;
+        private System.Windows.Forms.TextBox WynikiTextBox;
         private System.Windows.Forms.Button SzukajButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Wybor3;
+        private System.Windows.Forms.ComboBox Wybor2;
         private System.Windows.Forms.ComboBox Wybor1;
     }
 }
