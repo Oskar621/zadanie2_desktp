@@ -31,14 +31,21 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Imie_input = new System.Windows.Forms.TextBox();
-            this.Nazwisko_input = new System.Windows.Forms.TextBox();
-            this.Klasa_input = new System.Windows.Forms.TextBox();
             this.Dodaj_button = new System.Windows.Forms.Button();
+            this.Klasa_input = new System.Windows.Forms.TextBox();
+            this.Nazwisko_input = new System.Windows.Forms.TextBox();
+            this.Imie_input = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SzukajButton = new System.Windows.Forms.Button();
+            this.Wyniki = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Wybor1 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +61,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.Wybor1);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.Wyniki);
+            this.tabPage1.Controls.Add(this.SzukajButton);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -79,25 +92,39 @@
             this.tabPage2.Text = "Dodaj ucznia";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // Dodaj_button
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(130, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Imie";
+            this.Dodaj_button.Location = new System.Drawing.Point(558, 316);
+            this.Dodaj_button.Name = "Dodaj_button";
+            this.Dodaj_button.Size = new System.Drawing.Size(120, 23);
+            this.Dodaj_button.TabIndex = 6;
+            this.Dodaj_button.Text = "Dodaj";
+            this.Dodaj_button.UseVisualStyleBackColor = true;
+            this.Dodaj_button.Click += new System.EventHandler(this.Dodaj_button_Click);
             // 
-            // label2
+            // Klasa_input
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(130, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nazwisko";
+            this.Klasa_input.Location = new System.Drawing.Point(355, 241);
+            this.Klasa_input.Multiline = true;
+            this.Klasa_input.Name = "Klasa_input";
+            this.Klasa_input.Size = new System.Drawing.Size(237, 29);
+            this.Klasa_input.TabIndex = 5;
+            // 
+            // Nazwisko_input
+            // 
+            this.Nazwisko_input.Location = new System.Drawing.Point(355, 171);
+            this.Nazwisko_input.Multiline = true;
+            this.Nazwisko_input.Name = "Nazwisko_input";
+            this.Nazwisko_input.Size = new System.Drawing.Size(237, 29);
+            this.Nazwisko_input.TabIndex = 4;
+            // 
+            // Imie_input
+            // 
+            this.Imie_input.Location = new System.Drawing.Point(355, 93);
+            this.Imie_input.Multiline = true;
+            this.Imie_input.Name = "Imie_input";
+            this.Imie_input.Size = new System.Drawing.Size(237, 29);
+            this.Imie_input.TabIndex = 3;
             // 
             // label3
             // 
@@ -109,39 +136,84 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Klasa";
             // 
-            // Imie_input
+            // label2
             // 
-            this.Imie_input.Location = new System.Drawing.Point(355, 93);
-            this.Imie_input.Multiline = true;
-            this.Imie_input.Name = "Imie_input";
-            this.Imie_input.Size = new System.Drawing.Size(237, 29);
-            this.Imie_input.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(130, 171);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nazwisko";
             // 
-            // Nazwisko_input
+            // label1
             // 
-            this.Nazwisko_input.Location = new System.Drawing.Point(355, 171);
-            this.Nazwisko_input.Multiline = true;
-            this.Nazwisko_input.Name = "Nazwisko_input";
-            this.Nazwisko_input.Size = new System.Drawing.Size(237, 29);
-            this.Nazwisko_input.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(130, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Imie";
             // 
-            // Klasa_input
+            // SzukajButton
             // 
-            this.Klasa_input.Location = new System.Drawing.Point(355, 241);
-            this.Klasa_input.Multiline = true;
-            this.Klasa_input.Name = "Klasa_input";
-            this.Klasa_input.Size = new System.Drawing.Size(237, 29);
-            this.Klasa_input.TabIndex = 5;
+            this.SzukajButton.Location = new System.Drawing.Point(525, 183);
+            this.SzukajButton.Name = "SzukajButton";
+            this.SzukajButton.Size = new System.Drawing.Size(75, 23);
+            this.SzukajButton.TabIndex = 0;
+            this.SzukajButton.Text = "Szukaj";
+            this.SzukajButton.UseVisualStyleBackColor = true;
+            this.SzukajButton.Click += new System.EventHandler(this.SzukajButton_Click);
             // 
-            // Dodaj_button
+            // Wyniki
             // 
-            this.Dodaj_button.Location = new System.Drawing.Point(558, 316);
-            this.Dodaj_button.Name = "Dodaj_button";
-            this.Dodaj_button.Size = new System.Drawing.Size(120, 23);
-            this.Dodaj_button.TabIndex = 6;
-            this.Dodaj_button.Text = "Dodaj";
-            this.Dodaj_button.UseVisualStyleBackColor = true;
-            this.Dodaj_button.Click += new System.EventHandler(this.Dodaj_button_Click);
+            this.Wyniki.Location = new System.Drawing.Point(3, 213);
+            this.Wyniki.Multiline = true;
+            this.Wyniki.Name = "Wyniki";
+            this.Wyniki.Size = new System.Drawing.Size(780, 210);
+            this.Wyniki.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label4.Location = new System.Drawing.Point(123, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(303, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Wczytaj kryteria wyszukiwania";
+            // 
+            // Wybor1
+            // 
+            this.Wybor1.FormattingEnabled = true;
+            this.Wybor1.Items.AddRange(new object[] {
+            "Imie",
+            "Nazwisko",
+            "Klasa"});
+            this.Wybor1.Location = new System.Drawing.Point(85, 87);
+            this.Wybor1.Name = "Wybor1";
+            this.Wybor1.Size = new System.Drawing.Size(121, 21);
+            this.Wybor1.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "rozpoczyna sie od ",
+            "jest równe"});
+            this.comboBox1.Location = new System.Drawing.Point(285, 87);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(469, 87);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(131, 21);
+            this.textBox1.TabIndex = 5;
             // 
             // Form2
             // 
@@ -153,6 +225,8 @@
             this.Text = "Sekretariat";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -171,5 +245,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Wyniki;
+        private System.Windows.Forms.Button SzukajButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Wybor1;
     }
 }

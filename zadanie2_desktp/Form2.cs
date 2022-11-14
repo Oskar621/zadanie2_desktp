@@ -39,9 +39,8 @@ namespace zadanie2_desktp
             }
             else
             {
-                FileStream plik = new FileStream(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\uczen.txt", FileMode.Open);
-                StreamWriter fs = new StreamWriter(plik);
-                StreamReader odczyt = new StreamReader(plik);
+                
+                StreamReader odczyt = new StreamReader(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\uczen.txt",true);
                 int liczba = 0;
                 string linia;
                 string id_ucznia = "";
@@ -49,23 +48,43 @@ namespace zadanie2_desktp
                 {
                     liczba++;
                 }
-                if (liczba > 100)
+                if (liczba >= 100)
                 {
-                    id_ucznia = liczba.ToString();
+                    id_ucznia += liczba.ToString();
                 }
-                else if(liczba > 10)
+                else if(liczba >= 10)
                 {
-                    id_ucznia = "0" + liczba.ToString();
+                    id_ucznia += "0" + liczba.ToString();
                 }
                 else
                 {
-                    id_ucznia = "00" + liczba.ToString();
+                    id_ucznia += "00" + liczba.ToString();
                 }
-                string do_dopisania = $"{id_ucznia};{imie};{nazwisko};{klasa}";
-                fs.Write(do_dopisania);
                 odczyt.Close();
-                plik.Close();
+                StreamWriter fs = new StreamWriter(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\uczen.txt", true);
+                string do_dopisania = $"{id_ucznia};{imie};{nazwisko};{klasa}";
+                fs.Write(Environment.NewLine);
+                fs.Write(do_dopisania);
+                fs.Close();      
             }
+        }
+
+        private void SzukajButton_Click(object sender, EventArgs e)
+        {
+            string[][] tablica;
+            StreamReader fs = new StreamReader(@"C:\Users\student\source\repos\Oskar621\zadanie2_desktp\asd\uczen.txt", true);
+            string linia;
+
+            List<string[]> lista = new List<string[]>();
+            while ((linia = fs.ReadLine()) != null)
+            {
+                string[] tablica2 = linia.Split(';');
+                lista.Add(tablica2);
+            }
+            tablica = lista.ToArray();
+            fs.Close();
+            
+
         }
     }
 }
